@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ScaleCrafter: Tuning-free Higher Resolution Sampling from Diffusion Models">
+  <meta property="og:title" content="ScaleCrafter: Tuning-free Higher Resolution Sampling from Diffusion Models"/>
+  <meta property="og:description" content="ScaleCrafter: Tuning-free Higher Resolution Sampling from Diffusion Models"/>
+  <meta property="og:url" content=""/>
+  <meta property="og:image" content="static/images/carousel1.jpg" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="ScaleCrafter: Tuning-free Higher Resolution Sampling from Diffusion Models">
+  <meta name="twitter:description" content="ScaleCrafter: Tuning-free Higher Resolution Sampling from Diffusion Models">
+  <meta name="twitter:image" content="static/images/carousel1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ScaleCrafter</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h4 class="title publication-title">
+              ScaleCrafter: Tuning-free Higher Resolution Sampling from Diffusion Models
+            </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3"><strong>Abstract</h2>
+    <div class="content has-text-justified">
+      <p style="font-size: 14px;">
+        In this work, we investigate the capability of generating images from pre-trained diffusion models at much higher resolutions than the training image sizes. 
+        In addition, the generated images should have arbitrary image aspect ratios.
+        When generating images directly at a higher resolution, 1024 x 1024, with the pre-trained Stable Diffusion using training images of resolution 512 x 512, we observe persistent problems of object repetition and unreasonable object structures. 
+        Existing works for higher-resolution generation, such as attention-based and joint-diffusion approaches, cannot well address these issues.
+        As a new perspective, we examine the structural components of the U-Net in diffusion models and identify the crucial cause as the limited convolution perception field. 
+        Based on this key observation, we propose a simple yet effective re-dilation that can dynamically adjust the convolutional perception field during inference.
+        We further propose the dispersed convolution and \cfg, which can enable ultra-high-resolution image generation (e.g., 4096 x 4096).
+        Notably, our approach does not require any training or optimization. 
+        Extensive experiments demonstrate that our approach can address the repetition issue well and achieve state-of-the-art performance on higher-resolution image synthesis, especially in local details. 
+        Our work also suggests that a pre-trained diffusion model trained on low-resolution images can be directly used for high-resolution images without further tuning, which may provide insights for future research on ultra-high-resolution image and video synthesis.
+      </p>
+    </div>
+    </div>
+  </div>
+</section>
