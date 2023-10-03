@@ -106,17 +106,46 @@ body {
 
 .results-carousel {
   overflow: hidden;
+  height: 90vh;
 }
-
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
   padding: 20px;
   font-size: 0;
 }
-
 .results-carousel video {
   margin: 0;
+}
+.carousel-container {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.carousel {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto; /* 居中 */
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+  position: relative;
+}
+.img-txt{
+  padding: 30px;
+  text-align: center;
+  margin: auto;
+}
+.img-txt img {
+  margin:auto;
+  vertical-align:middle;
+}
+.img-txt p {
+  margin-top: 10px;
+  margin: auto;
 }
 
 .slider-pagination .slider-page {
