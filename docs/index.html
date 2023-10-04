@@ -66,30 +66,34 @@
     <div class="content has-text-justified">
       <p style="font-size: 14px;">
         In this work, we investigate the capability of generating images from pre-trained diffusion models at much higher resolutions than the training image sizes. 
-        In addition, the generated images should have arbitrary image aspect ratios.
-        When generating images directly at a higher resolution, 1024 x 1024, with the pre-trained Stable Diffusion using training images of resolution 512 x 512, we observe persistent problems of object repetition and unreasonable object structures. 
-        Existing works for higher-resolution generation, such as attention-based and joint-diffusion approaches, cannot well address these issues.
-        As a new perspective, we examine the structural components of the U-Net in diffusion models and identify the crucial cause as the limited convolution perception field. 
-        Based on this key observation, we propose a simple yet effective re-dilation that can dynamically adjust the convolutional perception field during inference.
-        We further propose the dispersed convolution and \cfg, which can enable ultra-high-resolution image generation (e.g., 4096 x 4096).
+        In addition, the generated images should have arbitrary image aspect ratios. 
+        When generating images directly at a higher resolution, 1024 x 1024, with the pre-trained Stable Diffusion using training images of resolution 512 x 512, 
+        we observe persistent problems of object repetition and unreasonable object structures. 
+        Existing works for higher-resolution generation, such as attention-based and joint-diffusion approaches, cannot well address these issues. 
+        As a new perspective, we examine the structural components of the U-Net in diffusion models and identify the crucial cause as the limited perception field of convolutional kernels. 
+        Based on this key observation, we propose a simple yet effective re-dilation that can dynamically adjust the convolutional perception field during inference. 
+        We further propose the dispersed convolution and noise-damped classifier-free guidance, which can enable ultra-high-resolution image generation (e.g., 4096 x 4096). 
         Notably, our approach does not require any training or optimization. 
-        Extensive experiments demonstrate that our approach can address the repetition issue well and achieve state-of-the-art performance on higher-resolution image synthesis, especially in local details. 
-        Our work also suggests that a pre-trained diffusion model trained on low-resolution images can be directly used for high-resolution images without further tuning, which may provide insights for future research on ultra-high-resolution image and video synthesis.
+        Extensive experiments demonstrate that our approach can address the repetition issue well and achieve state-of-the-art performance on higher-resolution image synthesis, 
+        especially in texture details. 
+        Our work also suggests that a pre-trained diffusion model trained on low-resolution images can be directly used for high-resolution visual generation without further tuning, 
+        which may provide insights for future research on ultra-high-resolution image and video synthesis. 
       </p>
     </div>
     </div>
   </div>
 </section>
 
+<br>
+<br>
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
       <h2 class="title is-3"><strong>Results</h2>
       <div class="content has-text-justified">
         <div class="content has-text-justified">
 
-          <h3 class="title is-4"><strong>Higher-Resolution Images with SD XL</h3>
-          <div id="carousel" class="carousel results-carousel">
+          <h3 class="title is-4"><strong>Higher-Resolution Synthsized Images with SD XL</h3>
+          <div id="carousel" class="carousel">
             <div class="img-txt">
               <img src="images/sdxl/4096x4096/Close up of a pair of vibrant koi fish swim upstream, surmounting a waterfall, oil painting style.jpg" alt="图片">
               <p>Resolution: 4096x4096; Prompt: “Close up of a pair of vibrant koi fish swim upstream, surmounting a waterfall, oil painting style”</p>
@@ -97,10 +101,6 @@
             <div class="img-txt">
               <img src="images/sdxl/4096x4096/North sunset in Norway. Stunning sea view from mountains. Beautiful bay in evening sunlight. Lofoten islands landscape..jpg" alt="图片">
               <p>Resolution: 4096x4096; Prompt: “North sunset in Norway. Stunning sea view from mountains. Beautiful bay in evening sunlight. Lofoten islands landscape.”</p>
-            </div>
-            <div class="img-txt">
-              <img src="images/sdxl/4096x2048/146_15.jpg" alt="图片">
-              <p>Resolution: 4096x2048; Prompt: “A rabbit is riding a bicycle in New York Street”</p>
             </div>
             <div class="img-txt">
               <img src="images/sdxl/4096x2048/A cherry blossom tree in full bloom amidst an arctic tundra showering petals on a polar bear.jpg" alt="图片">
@@ -129,12 +129,13 @@
           </div>
         </div>
     
-        
-        <h3 class="title is-4"><strong>Higher-Resolution Images with SD 2.1</h3>
-        <div id="carousel" class="carousel results-carousel">
+        <br>
+        <br>
+        <h3 class="title is-4"><strong>Higher-Resolution Synthsized Images with SD 2.1</h3>
+        <div id="carousel" class="carousel">
           <div class="img-txt">
             <img src="images/SDv2-1/2048x2048/292-rank0-iter29-HDR-Image-of-Yosemite-Falls.jpg" alt="图片">
-            <p>Resolution: 2048x2048; “HDR Image of Yosemite Falls”</p>
+            <p>Resolution: 2048x2048; Prompt: “HDR Image of Yosemite Falls”</p>
           </div>
           <div class="img-txt">
             <img src="images/SDv2-1/2048x2048/7-rank0-iter3-Maine-Coon_seed56_sample2.jpg" alt="图片">
@@ -166,23 +167,23 @@
           <!-- </div> -->
           <div class="img-txt">
             <img src="images/SDv2-1/2048x1024/11-rank1-iter3-a-photo-of-wonder-woman_seed57_sample3.jpg" alt="图片">
-            <p>Resolution: 2048x1024; "a photo of wonder woman"</p>
+            <p>Resolution: 2048x1024; Prompt: "a photo of wonder woman"</p>
           </div>
           <div class="img-txt">
             <img src="images/SDv2-1/2048x1024/14-rank1-iter4-The-winding-Great-Wall-of-China-in-autumn_seed57_sample0.jpg" alt="图片">
-            <p>Resolution: 2048x1024; "The winding Great Wall of China in autumn"</p>
+            <p>Resolution: 2048x1024; Prompt: "The winding Great Wall of China in autumn"</p>
           </div>
           <div class="img-txt">
             <img src="images/SDv2-1/2048x1024/3-rank2-iter0-A-Cute-Puppy-with-wings,-Cartoon-Drawings,-high-details_seed58_sample18.jpg" alt="图片">
-            <p>Resolution: 2048x1024; "A Cute Puppy with wings, Cartoon Drawings, high details"</p>
+            <p>Resolution: 2048x1024; Prompt: "A Cute Puppy with wings, Cartoon Drawings, high details"</p>
           </div>
           <div class="img-txt">
             <img src="images/SDv2-1/2048x1024/6-rank0-iter5-A-photo-of-a-raccoon-wearing-an-astronaut-helmet,-looking-ou.jpg" alt="图片">
-            <p>Resolution: 2048x1024; "A photo of a raccoon wearing an astronaut helmet, looking out"</p>
+            <p>Resolution: 2048x1024; Prompt: "A photo of a raccoon wearing an astronaut helmet, looking out"</p>
           </div>
           <div class="img-txt">
             <img src="images/SDv2-1/2048x1024/6-rank2-iter1-A-Cute-Puppy-with-wings,-in-sky,-photorealistic,-high-detail_seed58_sample12.jpg" alt="图片">
-            <p>Resolution: 2048x1024; "A Cute Puppy with wings, in sky, photorealistic, high detail"</p>
+            <p>Resolution: 2048x1024; Prompt: "A Cute Puppy with wings, in sky, photorealistic, high detail"</p>
           </div>
           <!-- <div class="img-txt">
             <img src="images/SDv2-1/2048x1024/6-rank2-iter1-A-Cute-Puppy-with-wings,-in-sky,-photorealistic,-high-detail_seed58_sample4.jpg" alt="图片">
@@ -194,19 +195,19 @@
           </div> -->
           <div class="img-txt">
             <img src="images/SDv2-1/2048x1024/8-rank1-iter2-Sushi-Roll-on-a-wooden-table_seed57_sample17.jpg" alt="图片">
-            <p>Resolution: 2048x1024; "Sushi Roll on a wooden table"</p>
+            <p>Resolution: 2048x1024; Prompt: "Sushi Roll on a wooden table"</p>
           </div>
           <div class="img-txt">
             <img src="images/SDv2-1/1024x1024/00002-photo-of-a-cat-holding-a-pineapple-seed52.jpg" alt="图片">
-            <p>Resolution: 1024x1024; “photo of a cat holding a pineapple”</p>
+            <p>Resolution: 1024x1024; Prompt: “photo of a cat holding a pineapple”</p>
           </div>
           <div class="img-txt">
             <img src="images/SDv2-1/1024x1024/00014-A-rabbit-is-skateboarding-in-Time-Square-seed50.jpg" alt="图片">
-            <p>Resolution: 1024x1024; “A rabbit is skateboarding in Time Square”</p>
+            <p>Resolution: 1024x1024; Prompt: “A rabbit is skateboarding in Time Square”</p>
           </div>
           <div class="img-txt">
             <img src="images/SDv2-1/1024x1024/4-rank0-iter3-cherry-with-water-splashed-in-all-directions-in-a-bowl. 2.jpg" alt="图片">
-            <p>Resolution: 1024x1024; “cherry with water splashed in all directions in a bowl”</p>
+            <p>Resolution: 1024x1024; Prompt: “cherry with water splashed in all directions in a bowl”</p>
           </div>
           <!-- <div class="img-txt">
             <img src="images/SDv2-1/1024x1024/00003-poster-of-a-mechanical-cute-cat.s-seed52.jpg" alt="图片">
@@ -214,73 +215,65 @@
           </div> -->
           <div class="img-txt">
             <img src="images/SDv2-1/1024x1024/00004-A-rabbit-is-riding-a-bicycle-in-New-York-Street-seed50.jpg" alt="图片">
-            <p>Resolution: 1024x1024; “A rabbit is riding a bicycle in New York Street”</p>
+            <p>Resolution: 1024x1024; Prompt: “A rabbit is riding a bicycle in New York Street”</p>
           </div>
           <div class="img-txt">
             <img src="images/SDv2-1/2048x2048/45-rank0-iter4-Stack-coins-with-plants-to-grow-into-steps.-business-growth-.jpg" alt="图片">
-            <p>Resolution: 2048x2048; “Stack coins with plants to grow into steps”</p>
+            <p>Resolution: 2048x2048; Prompt: “Stack coins with plants to grow into steps”</p>
           </div>
           
-        </div>
       </div>
 
       
     
-
+      <br>
+      <br>
       <div class="content has-text-justified">
-        <h3 class="title is-4"><strong>Higher-Resolution Images with SD 1.5</h3>
-        <div id="carousel" class="carousel results-carousel">
+        <h3 class="title is-4"><strong>Higher-Resolution Synthsized Images with SD 1.5</h3>
+        <div id="carousel" class="carousel">
           <div class="img-txt">
             <img src="images/sd1-5/2048x2048/A rustic wooden cabin nestled in a snowy forest2.jpg" alt="图片">
-            <p>“photo of a cat holding a pineapple”</p>
+            <p>Resolution: 2048x2048; Prompt: “A rustic wooden cabin nestled in a snowy forest”</p>
           </div>
           <div class="img-txt">
             <img src="images/sd1-5/2048x1024/A dog wearing a Superhero outfit with red cape flying through the sky.jpg" alt="图片">
-            <p>“poster of a mechanical cute cat”</p>
+            <p>Resolution: 2048x1024; Prompt: “A dog wearing a Superhero outfit with red cape flying through the sky”</p>
           </div>
           <div class="img-txt">
             <img src="images/sd1-5/2048x1024/A picturesque mountain scene with a clear lake reflecting the surrounding peaks2.jpg" alt="图片">
-            <p>“A rabbit is riding a bicycle in New York Street”</p>
+            <p>Resolution: 2048x1024; Prompt: “A picturesque mountain scene with a clear lake reflecting the surrounding peaks”</p>
           </div>
           <div class="img-txt">
             <img src="images/sd1-5/2048x1024/A squirrel eating an acorn in a forest.jpg" alt="图片">
-            <p>“A rabbit is skateboarding in Time Square”</p>
+            <p>Resolution: 2048x1024; Prompt: “A squirrel eating an acorn in a forest”</p>
           </div>
           <div class="img-txt">
             <img src="images/sd1-5/1024x1024/A beautiful sunset over a calm ocean with a lighthouse in the distance2.jpg" alt="图片">
-            <p>“cherry with water splashed in all directions in a bowl”</p>
+            <p>Resolution: 1024x1024; Prompt: “A beautiful sunset over a calm ocean with a lighthouse in the distance”</p>
           </div>
           <div class="img-txt">
             <img src="images/sd1-5/1024x1024/A butterfly landing on a sunflower.jpg" alt="图片">
-            <p>“cherry with water splashed in all directions in a bowl”</p>
+            <p>Resolution: 1024x1024; Prompt: “A butterfly landing on a sunflower”</p>
           </div>
           <div class="img-txt">
             <img src="images/sd1-5/1024x1024/A charming raccoon stealthily rummages through a homeowner's trash can.jpg" alt="图片">
-            <p>“cherry with water splashed in all directions in a bowl”</p>
+            <p>Resolution: 1024x1024; Prompt: “A charming raccoon stealthily rummages through a homeowner's trash can”</p>
           </div>
           <div class="img-txt">
             <img src="images/sd1-5/1024x1024/A confused grizzly bear in calculus class.jpg" alt="图片">
-            <p>“cherry with water splashed in all directions in a bowl”</p>
+            <p>Resolution: 1024x1024; Prompt: “A confused grizzly bear in calculus class”</p>
           </div>
           <div class="img-txt">
             <img src="images/sd1-5/1024x1024/A fox peeking out from behind a bush2.jpg" alt="图片">
-            <p>“cherry with water splashed in all directions in a bowl”</p>
-          </div>
-          <div class="img-txt">
-            <img src="images/sd1-5/1024x1024/A confused grizzly bear in calculus class.jpg" alt="图片">
-            <p>“cherry with water splashed in all directions in a bowl”</p>
-          </div>
-          <div class="img-txt">
-            <img src="images/sd1-5/1024x1024/A fox peeking out from behind a bush2.jpg" alt="图片">
-            <p>“cherry with water splashed in all directions in a bowl”</p>
+            <p>Resolution: 1024x1024; Prompt: “A fox peeking out from behind a bush”</p>
           </div>
           <div class="img-txt">
             <img src="images/sd1-5/1024x1024/A picturesque mountain scene with a clear lake reflecting the surrounding peaks.jpg" alt="图片">
-            <p>“cherry with water splashed in all directions in a bowl”</p>
+            <p>Resolution: 1024x1024; Prompt: “A picturesque mountain scene with a clear lake reflecting the surrounding peaks”</p>
           </div>
           <div class="img-txt">
             <img src="images/sd1-5/1024x1024/A tranquil garden filled with blooming flowers and a small fountain2.jpg" alt="图片">
-            <p>“cherry with water splashed in all directions in a bowl”</p>
+            <p>Resolution: 1024x1024; Prompt: “A tranquil garden filled with blooming flowers and a small fountain”</p>
           </div>
         </div>
       </div>
