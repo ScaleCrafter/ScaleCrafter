@@ -324,6 +324,41 @@ a:hover:after{
   margin-top: 10px;
   margin: auto;
 }
+
+
+.carousel-vid {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 1050px;
+  overflow: 2;
+  flex-direction: column; 
+  position: relative;
+}
+.vid-txt{
+  padding: 30px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  width: 1024px;
+  height: 680px;
+}
+.vid-txt p {
+  margin-top: 10px;
+  margin: auto;
+}
+.vid-txt video {
+  margin-top: 10px;
+  margin: auto;
+  width: 1024px;
+  height: 640px;
+}
+
 .resolution{
   text-align: center;
   font-size: 25px;
