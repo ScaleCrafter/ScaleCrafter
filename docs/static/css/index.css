@@ -317,12 +317,13 @@ a:hover:after{
   flex-direction: column; 
 }
 .img-txt img {
-  margin:auto;
   vertical-align:middle;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .img-txt p {
-  margin-top: 10px;
-  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 
