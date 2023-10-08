@@ -1,5 +1,6 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
+  /* font-family: 'Noto Sans', sans-serif; */
+  font-family: 'century-gothic'
 }
 
 
@@ -24,7 +25,8 @@ body {
 }
 
 .teaser {
-  font-family: 'Google Sans', sans-serif;
+  /* font-family: 'Google Sans', sans-serif; */
+  font-family: 'century-gothic'
 }
 
 
@@ -48,12 +50,14 @@ body {
 }
 
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
-}
+    /* font-family: 'Google Sans', sans-serif; */
+    font-family: 'century-gothic'
+  }
 
 .publication-authors {
-    font-family: 'Google Sans', sans-serif;
-}
+    /* font-family: 'Google Sans', sans-serif; */
+    font-family: 'century-gothic'
+  }
 
 .publication-venue {
     color: #555;
@@ -125,9 +129,10 @@ body{
     border-top:5px solid rgb(255, 180, 240);
     /*border-bottom:5px solid orange;*/
 }
-b{
+
+/* b{
   color:rgb(0, 79, 241);
-}
+} */
 
 .title{
   text-align: center;
@@ -145,7 +150,8 @@ b{
   border-left: 5px solid rgb(255, 180, 240);
 }
 .xtitle{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-family: 'century-gothic';
     font-size: 30px;
     text-align: center;
     /* margin: 10px 0; */
@@ -245,7 +251,8 @@ a:hover:after{
 .marquee-inner p{
   /* font-weight: 600;
   font-size: 20px; */
-  font-family: cursive;
+  /* font-family: cursive; */
+  font-family: 'century-gothic';
 }
 .marquee-inner.to-left{
   animation: marqueeLeft 25s linear infinite;
@@ -302,7 +309,7 @@ a:hover:after{
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: 1175px;
+  width: 900px;
   /* height: 1550px; */
   overflow: 2;
   flex-direction: column; 
@@ -313,8 +320,8 @@ a:hover:after{
   padding: 30px;
   text-align: center;
   margin: auto;
-  height: 1150px;
-  width: 1150px;
+  height: 700px;
+  /* width: 700px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -402,7 +409,8 @@ a:hover:after{
   text-align: center;
   font-size: 25px;
   font-weight: 1500;
-  font-family: cursive;
+  /* font-family: cursive; */
+  font-family: 'century-gothic';
   color: rgb(28, 29, 31);
 }
 .p {
@@ -448,4 +456,11 @@ a:hover:after{
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+
+.container-small {
+  width: 60vw;
+  margin: auto;
+}
+.page {
 }
