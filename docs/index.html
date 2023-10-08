@@ -48,7 +48,8 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h4 class="title publication-title">
-              ScaleCrafter: Tuning-free Higher-Resolution Visual Generation with Diffusion Models
+              ScaleCrafter: Tuning-free Higher-Resolution Visual Generation <br>
+              with Diffusion Models
             </h4>
             </div>
           </div>
@@ -79,9 +80,53 @@
         Our work also suggests that a pre-trained diffusion model trained on low-resolution images can be directly used for high-resolution visual generation without further tuning, 
         which may provide insights for future research on ultra-high-resolution image and video synthesis. 
       </p>
+
+      <p style="text-align: center;"> Generate an image of <i>“A panda is surfing in the universe” of resolution</i> <span style="color:#974EC3">1024 x 1024</span> 
+        using SD 2.1-<span style="color:#974EC3">512</span></p>
+      <table style="margin: 0 auto;">
+        <tr>
+          <td><img src="images/compare-1024/directinf-00001-A-panda-is-surfing-in-the-universe.-seed51.jpg" style="width: 220px" alt="图片"></td>
+          <td><img src="images/compare-1024/attnsf-00001-A-panda-is-surfing-in-the-universe.-seed51.jpg" style="width: 220px" alt="图片"></td>
+          <td><img src="images/compare-1024/multi-A-panda-is-surfing-in-the-universe.jpg" style="width: 220px" alt="图片"></td>
+          <td><img src="images/compare-1024/sync-sample_seed_000051.png" style="width: 220px" alt="图片"></td>
+          <td><img src="images/compare-1024/ours-A-panda-is-surfing-in-the-universe.-seed51.jpg" style="width: 220px" alt="图片"></td>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-weight: 500;">1. Direct Inference</td>
+          <td style="text-align: center; font-weight: 500;">2. Scaling Attention</td>
+          <td style="text-align: center; font-weight: 500;">3. MultiDiffusion</td>
+          <td style="text-align: center; font-weight: 500;">4. SyncDiffusion</td>
+          <td style="text-align: center; font-weight: 500;">5. <span style="font-weight: 1000;">Ours</span></td>
+        </tr>
+      </table>
+
+      <p style="text-align: center;"> Generate a video of <i>“An astronaut is waving his hands on the moon</i> <span style="color:#974EC3">1024 x 640</span> 
+        using a latent video diffusion model trained on <span style="color:#974EC3">512x320</span> </p>
+      <table style="margin: 0 auto;">
+        <tr>
+          <td><video autoplay muted controls="" loop="" width="520px"> <source src="compare-videos/sdori-0000_randk0-seed123_000.mp4" type="video/mp4"></video></td>
+          <td><video autoplay muted controls="" loop="" width="520px"> <source src="compare-videos/attnsf-0000_randk0-seed123_000.mp4" type="video/mp4"></video></td>
+          <td><video autoplay muted controls="" loop="" width="520px"> <source src="compare-videos/0205.mp4" type="video/mp4"></video></td>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-weight: 500;">1. Direct Inference</td>
+          <td style="text-align: center; font-weight: 500;">2. Scaling Attention</td>
+          <td style="text-align: center; font-weight: 500;">5. <span style="font-weight: 1000;">Ours</span></td>
+        </tr>
+    </table>
+
+      <!-- <div class="baseline-img-square" style="">
+        <img src="images/compare-1024/directinf-00001-A-panda-is-surfing-in-the-universe.-seed51.jpg" alt="图片">
+        <img src="images/compare-1024/attnsf-00001-A-panda-is-surfing-in-the-universe.-seed51.jpg" alt="图片">
+        <img src="images/compare-1024/multi-A-panda-is-surfing-in-the-universe.jpg" alt="图片">
+        <img src="images/compare-1024/sync-sample_seed_000051.png" alt="图片">
+        <img src="images/compare-1024/ours-A-panda-is-surfing-in-the-universe.-seed51.jpg" alt="图片">
+      </div> -->
+      
     </div>
     </div>
   </div>
+  
 </section>
 
 <br>
@@ -93,7 +138,7 @@
         <div class="content has-text-justified">
 
           <h3 class="title is-4"><strong>Higher-Resolution Synthsized Images with SD XL</h3>
-          <p style="text-align: center"> The model was pre-trained on resolution of 1024x1024, whlie our method can generate images with resolution up to with 4096x4096 with high definition. </p>
+          <p style="text-align: center"> The model was pre-trained on resolution of 1024x1024, whlie our method can generate images with resolution up to with 4096x4096 with high definition <i style="color:#974EC3">without training/optimization</i>. </p>
           <div id="carousel" class="carousel">
             <div class="img-txt">
               <img src="images/sdxl/4096x4096/Close up of a pair of vibrant koi fish swim upstream, surmounting a waterfall, oil painting style.jpg" alt="图片">
@@ -133,7 +178,7 @@
         <br>
         <br>
         <h3 class="title is-4"><strong>Higher-Resolution Synthsized Videos with Latent Video Diffusion Models</h3>
-        <p style="text-align: center"> The model was pre-trained on resolution of 512x320, whlie our method can generate videos of 1024x640 resolution with high definition. </p>
+        <p style="text-align: center"> The model was pre-trained on resolution of 512x320, whlie our method can generate videos of 1024x640 resolution with high definition <i style="color:#974EC3">without training/optimization</i>. </p>
           <div id="carousel" class="carousel carousel-vid">
           <div class="vid-txt">
             <video autoplay muted controls="" loop="" width="1000px" height="1000px">
@@ -177,12 +222,12 @@
             <p>Resolution: 1024x640; Prompt: “A girl is looking at the camera smiling. High Definition.”</p>
           </div>
 
-          <div class="vid-txt">
+          <!-- <div class="vid-txt">
             <video autoplay muted controls="" loop="" width="1000px" height="1000px">
               <source src="videos/0205.mp4" type="video/mp4">
             </video>
             <p>Resolution: 1024x640; Prompt: “An astronaut is waving his hands on the moon”</p>
-          </div>
+          </div> -->
 
           <div class="vid-txt">
             <video autoplay muted controls="" loop="" width="1000px" height="1000px">
@@ -203,7 +248,7 @@
         <br>
         <br>
         <h3 class="title is-4"><strong>Higher-Resolution Synthsized Images with SD 2.1</h3>
-          <p style="text-align: center"> The model was pre-trained on resolution of 512x512, whlie our method can generate images with resolution up to with 2048x2048 with high definition. </p>
+          <p style="text-align: center"> The model was pre-trained on resolution of 512x512, whlie our method can generate images with resolution up to with 2048x2048 with high definition <i style="color:#974EC3">without training/optimization</i>. </p>
           <div id="carousel" class="carousel">
           <div class="img-txt">
             <img src="images/SDv2-1/2048x2048/292-rank0-iter29-HDR-Image-of-Yosemite-Falls.jpg" alt="图片">
@@ -301,7 +346,7 @@
       <br>
       <div class="content has-text-justified">
         <h3 class="title is-4"><strong>Higher-Resolution Synthsized Images with SD 1.5</h3>
-          <p style="text-align: center"> The model was pre-trained on resolution of 512x512, whlie our method can generate images with resolution up to with 2048x2048 with high definition. </p>
+          <p style="text-align: center"> The model was pre-trained on resolution of 512x512, whlie our method can generate images with resolution up to with 2048x2048 with high definition <i style="color:#974EC3">without training/optimization</i>. </p>
           <div id="carousel" class="carousel">
           <div class="img-txt">
             <img src="images/sd1-5/2048x2048/A rustic wooden cabin nestled in a snowy forest2.jpg" alt="图片">
@@ -350,11 +395,62 @@
         </div>
       </div>
 
+      <br>
+      <br>
+      <h3 class="title is-4"><strong>Compare with baselines on Text-to-Panorama Generation</h3>
+      <p style="text-align: center;">We generate panorama of resolution 3072x512 following SyncDiffusion. 
+        <br> As shown below, our approach generate much more plausible and natural global structures than baselines,
+        <br> which exhibit repetitive semantics (1,2,3,4) and incoherent layout (3,4) issues.
+      </p>
+      <div id="carousel" class="carousel" style="width:750px; overflow: hidden;">
+        <div class="baseline-img">
+          <img src="images/comp-panorama/direct-gen/1-rank0-iter0-A-photo-of-a-lake-under-the-northern-lights_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">1. Direct Inference</span>
+          <img src="images/comp-panorama/attn-sf/1-rank0-iter0-A-photo-of-a-lake-under-the-northern-lights_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">2. Attention-SF</span>
+          <img src="images/comp-panorama/multi-diff/A photo of a lake under the northern lights.png" alt="图片">
+          <span style="font-size: 10px">3. MultiDiffusion</span>
+          <img src="images/comp-panorama/sync-diff/A photo of a lake under the northern lights.png" alt="图片">
+          <span style="font-size: 10px">4. SyncDiffusion</span>
+          <img src="images/comp-panorama/ours/4-rank3-iter0-A-photo-of-a-lake-under-the-northern-lights_seed54_sample2.jpg" alt="图片">
+          <span style="font-size: 10px">Ours</span>
+          <p>“A photo of a lake under the northern lights”</p>
+        </div>
+        <div class="baseline-img">
+          <img src="images/comp-panorama/direct-gen/2-rank0-iter1-A-beach-with-palm-trees_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">1.Direct Inference</span>
+          <img src="images/comp-panorama/attn-sf/2-rank0-iter1-A-beach-with-palm-trees_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">2. Attention-SF</span>
+          <img src="images/comp-panorama/multi-diff/A beach with palm trees.png" alt="图片">
+          <span style="font-size: 10px">3. MultiDiffusion</span>
+          <img src="images/comp-panorama/sync-diff/A beach with palm trees.png" alt="图片">
+          <span style="font-size: 10px">4. SyncDiffusion</span>
+          <img src="images/comp-panorama/ours/14-rank1-iter3-A-beach-with-palm-trees_seed52_sample3.jpg" alt="图片">
+          <span style="font-size: 10px">Ours</span>
+          <p>“A beach with palm trees”</p>
+        </div>
+        <div class="baseline-img">
+          <img src="images/comp-panorama/direct-gen/3-rank0-iter2-A-film-photo-of-a-beachside-street-under-the-sunset_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">1.Direct Inference</span>
+          <img src="images/comp-panorama/attn-sf/3-rank0-iter2-A-film-photo-of-a-beachside-street-under-the-sunset_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">2. Attention-SF</span>
+          <img src="images/comp-panorama/multi-diff/A film photo of a beachside street under the sunset.png" alt="图片">
+          <span style="font-size: 10px">3. MultiDiffusion</span>
+          <img src="images/comp-panorama/sync-diff/A film photo of a beachside street under the sunset.png" alt="图片">
+          <span style="font-size: 10px">4. SyncDiffusion</span>
+          <img src="images/comp-panorama/ours/11-rank0-iter10-A-film-photo-of-a-beachside-street-under-the-sunset_seed51_sample0 2.jpg" alt="图片">
+          <span style="font-size: 10px">Ours</span>
+          <p>“A film photo of a beachside street under the sunset”</p>
+        </div>
+      </div>
       
       
     
     </div>
   </div>
 </section>
+
+
+
 
 </body>
