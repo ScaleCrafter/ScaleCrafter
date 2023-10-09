@@ -37,6 +37,7 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  
 
 </head>
 <body>
@@ -66,20 +67,20 @@
       <div class="content has-text-justified">
         <p style="text-align: center;"> Generate an <b>image</b> of <i>“A panda is surfing in the universe” of resolution</i> <span style="color:#974EC3">1024 x 1024</span> 
           using SD 2.1 trained on <span style="color:#974EC3">512 x 512</span></p>
-        <table style="margin: 0 auto;">
+        <table style="margin: 0 auto; width: 100%">
           <tr>
-            <td><img src="images/compare-1024/directinf-00001-A-panda-is-surfing-in-the-universe.-seed51.jpg" style="width: 220px" alt="图片"></td>
-            <td><img src="images/compare-1024/attnsf-00001-A-panda-is-surfing-in-the-universe.-seed51.jpg" style="width: 220px" alt="图片"></td>
-            <td><img src="images/compare-1024/multi-A-panda-is-surfing-in-the-universe.jpg" style="width: 220px" alt="图片"></td>
-            <td><img src="images/compare-1024/sync-sample_seed_000051.png" style="width: 220px" alt="图片"></td>
-            <td><img src="images/compare-1024/ours-A-panda-is-surfing-in-the-universe.-seed51.jpg" style="width: 220px" alt="图片"></td>
+            <td style="width: 20%;"><img src="images/compare-1024/directinf-00001-A-panda-is-surfing-in-the-universe.-seed51.jpg" style="width: 15vw; height: auto;" alt="图片"></td>
+            <td style="width: 20%;"><img src="images/compare-1024/attnsf-00001-A-panda-is-surfing-in-the-universe.-seed51.jpg" style="width: 15vw; height: auto;" alt="图片"></td>
+            <td style="width: 20%;"><img src="images/compare-1024/multi-A-panda-is-surfing-in-the-universe.jpg" style="width: 15vw; height: auto;" alt="图片"></td>
+            <td style="width: 20%;"><img src="images/compare-1024/sync-sample_seed_000051.png" style="width: 15vw; height: auto;" alt="图片"></td>
+            <td style="width: 20%;"><img src="images/compare-1024/ours-A-panda-is-surfing-in-the-universe.-seed51.jpg" style="width: 15vw; height: auto;" alt="图片"></td>
           </tr>
           <tr>
-            <td style="text-align: center; font-weight: 500;">1. Direct Inference</td>
-            <td style="text-align: center; font-weight: 500;">2. Scaling Attention</td>
-            <td style="text-align: center; font-weight: 500;">3. MultiDiffusion</td>
-            <td style="text-align: center; font-weight: 500;">4. SyncDiffusion</td>
-            <td style="text-align: center; font-weight: 500;">5. <span style="font-weight: 1000;">Ours</span></td>
+            <td style="text-align: center; font-weight: 500; width: 20%;">1. Direct Inference</td>
+            <td style="text-align: center; font-weight: 500; width: 20%;">2. Scaling Attention</td>
+            <td style="text-align: center; font-weight: 500; width: 20%;">3. MultiDiffusion</td>
+            <td style="text-align: center; font-weight: 500; width: 20%;">4. SyncDiffusion</td>
+            <td style="text-align: center; font-weight: 500; width: 20%;">5. <span style="font-weight: 1000;">Ours</span></td>
           </tr>
         </table>
         <br>
@@ -87,9 +88,9 @@
           <br>using a latent video diffusion model trained on <span style="color:#974EC3">512 x 320</span> </p>
         <table style="margin: 0 auto;">
           <tr>
-            <td><video autoplay muted controls="" loop="" width="520px"> <source src="compare-videos/sdori-0000_randk0-seed123_000.mp4" type="video/mp4"></video></td>
-            <td><video autoplay muted controls="" loop="" width="520px"> <source src="compare-videos/attnsf-0000_randk0-seed123_000.mp4" type="video/mp4"></video></td>
-            <td><video autoplay muted controls="" loop="" width="520px"> <source src="compare-videos/0205.mp4" type="video/mp4"></video></td>
+            <td style="width: 33%;"><video autoplay muted controls="" loop=""> <source src="compare-videos/sdori-0000_randk0-seed123_000.mp4" type="video/mp4"></video></td>
+            <td style="width: 33%;"><video autoplay muted controls="" loop=""> <source src="compare-videos/attnsf-0000_randk0-seed123_000.mp4" type="video/mp4"></video></td>
+            <td style="width: 33%;"><video autoplay muted controls="" loop=""> <source src="compare-videos/0205.mp4" type="video/mp4"></video></td>
           </tr>
           <tr>
             <td style="text-align: center; font-weight: 500;">1. Direct Inference</td>
